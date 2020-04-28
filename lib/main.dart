@@ -1,14 +1,22 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(MaterialApp(
-  home: Center(
-    child: Text("Hello World")
-  ),
-  debugShowCheckedModeBanner: false,
-));
+void main() {
+  var image = Image(
+      image: NetworkImage(
+          "https://scontent.fsaw1-1.fna.fbcdn.net/v/t1.0-9/42153708_2175843499406821_6080028512503201792_n.png?_nc_cat=100&_nc_sid=dd9801&_nc_ohc=KXvtTpO3cNsAX8VJFa8&_nc_ht=scontent.fsaw1-1.fna&oh=0ff23f8d039f63f26a353f4e0b93d96b&oe=5ECDB6B0")
+  );
+  var appbarTitle = Text("Richy App");
+  var appBar = AppBar(title: appbarTitle, backgroundColor: Colors.blueGrey[900]);
+    return runApp(MaterialApp(
+      home: Scaffold(
+          backgroundColor: Colors.black12,
+          appBar: appBar,
+        body: image),
+    debugShowCheckedModeBanner: false,
+  ));
+}
 
 class MyApp extends StatelessWidget {
-  
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -24,7 +32,7 @@ class MyApp extends StatelessWidget {
 
 class HomePage extends StatefulWidget {
   HomePage({Key key, this.title}) : super(key: key);
-  
+
   final String title;
 
   @override
