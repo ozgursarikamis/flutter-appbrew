@@ -15,7 +15,7 @@ void main() {
           backgroundColor: Colors.black12,
           appBar: appBar,
         body: Center(child: Image(image: assetImage))),
-    debugShowCheckedModeBanner: false,
+    debugShowCheckedModeBanner: true,
   ));
 }
 
