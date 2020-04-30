@@ -5,13 +5,16 @@ void main() {
       image: NetworkImage(
           "https://scontent.fsaw1-1.fna.fbcdn.net/v/t1.0-9/42153708_2175843499406821_6080028512503201792_n.png?_nc_cat=100&_nc_sid=dd9801&_nc_ohc=KXvtTpO3cNsAX8VJFa8&_nc_ht=scontent.fsaw1-1.fna&oh=0ff23f8d039f63f26a353f4e0b93d96b&oe=5ECDB6B0")
   );
+
+  var assetImage = AssetImage("images/diamond.png");
+
   var appbarTitle = Text("Richy App");
   var appBar = AppBar(title: appbarTitle, backgroundColor: Colors.blueGrey[900]);
     return runApp(MaterialApp(
       home: Scaffold(
           backgroundColor: Colors.black12,
           appBar: appBar,
-        body: image),
+        body: Center(child: Image(image: assetImage))),
     debugShowCheckedModeBanner: false,
   ));
 }
